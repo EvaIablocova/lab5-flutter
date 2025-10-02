@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_typography.dart';
+import '../router.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, Routes.welcome);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -11,15 +25,7 @@ class SplashScreen extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: const BoxDecoration(
-          color: AppColors.success,
-          // Если у тебя есть фон с иконками, можно подключить:
-          // image: DecorationImage(
-          //   image: AssetImage('assets/images/medical_pattern.png'),
-          //   fit: BoxFit.cover,
-          //   opacity: 0.1,
-          // ),
-        ),
+        color: AppColors.success,
         child: Center(
           child: Text(
             'Telemedicine',
@@ -27,7 +33,6 @@ class SplashScreen extends StatelessWidget {
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
-            textAlign: TextAlign.center,
           ),
         ),
       ),

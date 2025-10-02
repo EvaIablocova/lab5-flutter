@@ -74,12 +74,8 @@ class DoctorListScreen extends StatelessWidget {
           );
         },
       ),
-      bottomNavigationBar: BottomNavBar(
-        currentIndex: 0,
-        onTap: (index) {
-          // обработка переходов
-        },
-      ),
+      bottomNavigationBar: BottomNavBar(currentIndex: 0),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // действие при нажатии "+"

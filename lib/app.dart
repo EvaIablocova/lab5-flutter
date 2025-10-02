@@ -13,8 +13,9 @@ class TelemedicineApp extends StatelessWidget {
       theme: AppTheme.light,       // светлая тема
       darkTheme: AppTheme.dark,    // тёмная тема (опционально)
       themeMode: ThemeMode.light,  // можно переключать
-      initialRoute: Routes.home,   // стартовый экран
+      initialRoute: Routes.splash,   // стартовый экран
       onGenerateRoute: AppRouter.onGenerateRoute,
     );
   }
 }
+

@@ -108,12 +108,7 @@ class DoctorDetailScreen extends StatelessWidget {
       ),
 
       // Нижняя навигация с вырезом под FAB
-      bottomNavigationBar: BottomNavBar(
-        currentIndex: 0,
-        onTap: (index) {
-          // обработка переходов
-        },
-      ),
+      bottomNavigationBar: BottomNavBar(currentIndex: 0),
 
       // Центральная кнопка "+"
       floatingActionButton: FloatingActionButton(
